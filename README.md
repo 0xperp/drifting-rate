@@ -35,3 +35,24 @@ Majority of this bot was prewritten, working on the following additions
 | PRIVATE_KEY       | Private key array                                     |
 | RPC_ADDRESS       | RPC address                                           |
 | NETWORK           | Network you are running like 'mainnet-beta'           |
+
+2. Start the Bot 
+```
+# via docker 
+## drift liq, mango liq, and drift-mango arb
+docker-compose up -d 
+
+# drift liq only 
+docker-compose up -d drift-liq 
+
+# mango liq only 
+docker-compose up -d mango-liq
+
+# drift-mango arb only 
+docker-compose up -d drift-arb
+
+# via typescript 
+npx ts-node drift-arb
+npx ts-node drift-liq
+npx ts-node mango-liq
+```
