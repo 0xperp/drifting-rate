@@ -1,0 +1,39 @@
+version: "3.7"
+services:
+  drift-arb:
+    build:
+      context: ./dockerfiles
+      dockerfile: arb
+    container_name: drift_arb
+    hostname: drift_arb
+    restart: always
+    networks: 
+      - drift-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # only needed if on a mac
+  drift-liq:
+    build:
+      context: ./dockerfiles
+      dockerfile: drift-liq
+    container_name: drift_liq
+    hostname: drift_liq
+    restart: always
+    networks: 
+      - drift-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # only needed if on a mac
+  mango-liq:
+    build:
+      context: ./dockerfiles
+      dockerfile: mango-liq
+    container_name: mango_liq
+    hostname: mango_liq
+    restart: always
+    networks: 
+      - drift-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # only needed if on a mac
+networks:
+  drift-network:
+    driver: bridge
+    name: drift-network
