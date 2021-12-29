@@ -1,5 +1,5 @@
 # drifting-rate
-> Thanks to [chenwainuo/drifting-mango](https://github.com/chenwainuo/drifting-mango) for the bot
+> Thanks to [chenwainuo/drifting-mango](https://github.com/chenwainuo/drifting-mango) for the initial bot
 
 Funding rate arbitrage on https://mango.markets and https://drift.trade
 
